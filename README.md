@@ -36,22 +36,24 @@ If a store blocks or disables public JSON endpoints, the tool reports it in `out
 
 ## Project structure
 
+`config.json`, `logs/`, `cache/`, and `output/` are local/generated runtime files and directories. They are intentionally ignored by Git. Create `config.json` locally from `config.example.json`; the runtime directories are created as needed when the scraper runs.
+
 ```text
 shopify_product_scraper_v2_1/
 ├── scraper.py
-├── config.json
-├── config.example.json
+├── config.json              # local runtime config (not tracked)
+├── config.example.json      # tracked configuration template
 ├── stores.csv
 ├── requirements.txt
 ├── Dockerfile
 ├── docker-compose.yml
-├── output/
+├── output/                  # generated output (not tracked)
 │   ├── products.csv
 │   ├── errors.csv
 │   └── summary.json
-├── logs/
+├── logs/                    # generated logs (not tracked)
 │   └── scraper.log
-└── cache/
+└── cache/                   # generated runtime state (not tracked)
     └── progress.json
 ```
 
@@ -121,7 +123,7 @@ python scraper.py --delay 1.0 --timeout 30 --max-pages 20
 
 ## Config
 
-Settings are stored in `config.json`:
+Copy `config.example.json` to `config.json` for local use. `config.json` contains local runtime settings and is intentionally ignored by Git:
 
 ```json
 {
