@@ -216,3 +216,29 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Project-local configuration
+config.json
+config.local.json
+*.local.json
+
+# Runtime data and generated output
+logs/
+cache/
+output/
+outputs/
+*.log
+
+# Docker local overrides
+docker-compose.override.yml
+compose.override.yml
+
+# Editor and operating-system files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+Desktop.ini
