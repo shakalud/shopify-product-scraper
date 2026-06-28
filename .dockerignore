@@ -1,7 +1,23 @@
-.venv
-__pycache__
+.git/
+.venv/
+__pycache__/
 *.pyc
-output/*.csv
-output/*.json
-logs/*.log
-cache/*.json
+.pytest_cache/
+
+config.json
+logs/
+cache/
+output/
+*.log
+
+# Editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
