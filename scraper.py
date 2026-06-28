@@ -35,7 +35,7 @@ DEFAULT_CONFIG = {
     "dedupe": True,
     "write_empty_targets_to_errors": True,
     "warn_on_empty_collection": True,
-    "user_agent": "Mozilla/5.0 (compatible; PublicShopifyProductScraper/0.2.1; +https://example.com/bot)",
+    "user_agent": "Mozilla/5.0 (compatible; PublicShopifyProductScraper/1.0.0; +https://example.com/bot)",
 }
 
 CSV_FIELDS = [
@@ -461,7 +461,7 @@ def main() -> None:
 
     summary: Dict[str, Any] = {
         "started_at": datetime.now().isoformat(timespec="seconds"),
-        "version": "2.1",
+        "version": "1.0.0",
         "config": {
             "limit": config.get("limit"),
             "max_pages": config.get("max_pages"),
