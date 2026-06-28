@@ -1,4 +1,4 @@
-# Shopify Product Data Scraper v2.1
+# Shopify Product Data Scraper v1.0.0
 
 A small Python tool for exporting publicly available Shopify product data to CSV.
 
@@ -39,7 +39,7 @@ If a store blocks or disables public JSON endpoints, the tool reports it in `out
 `config.json`, `logs/`, `cache/`, and `output/` are local/generated runtime files and directories. They are intentionally ignored by Git. Create `config.json` locally from `config.example.json`; the runtime directories are created as needed when the scraper runs.
 
 ```text
-shopify_product_scraper_v2_1/
+shopify-product-scraper/
 ├── scraper.py
 ├── config.json              # local runtime config (not tracked)
 ├── config.example.json      # tracked configuration template
@@ -142,11 +142,23 @@ Copy `config.example.json` to `config.json` for local use. `config.json` contain
   "skip_completed": false,
   "dedupe": true,
   "write_empty_targets_to_errors": true,
-  "warn_on_empty_collection": true
+  "warn_on_empty_collection": true,
+  "user_agent": "Mozilla/5.0 (compatible; PublicShopifyProductScraper/1.0.0; +https://example.com/bot)"
 }
 ```
 
 Command-line arguments override config values.
+
+## Development and tests
+
+Install development dependencies and run the offline test suite:
+
+```bash
+python -m pip install -r requirements-dev.txt
+python -m pytest -q
+```
+
+GitHub Actions runs the tests on Python 3.11 and 3.12 for pull requests and pushes to `main`.
 
 ## Docker run
 
@@ -154,6 +166,12 @@ Build and run with Docker Compose:
 
 ```bash
 docker compose up --build
+```
+
+By default, Docker Compose uses the tracked `config.example.json`. To use a local `config.json`, set `CONFIG_FILE` before running Compose:
+
+```bash
+CONFIG_FILE=./config.json docker compose up --build
 ```
 
 The container writes files to the local folders:
@@ -191,7 +209,7 @@ Problematic targets, including:
 - `NO_PRODUCTS` — endpoint worked but returned zero products
 - `ERROR` — request failed, endpoint blocked, non-JSON response, timeout, etc.
 
-For empty category URLs, v2.1 writes a clearer message such as:
+For empty category URLs, v1.0.0 writes a clearer message such as:
 
 ```text
 Collection endpoint returned zero products. Check the collection handle/category URL, or use the full store export if the public collection JSON is empty.
