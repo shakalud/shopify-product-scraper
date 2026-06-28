@@ -4,7 +4,12 @@ services:
     container_name: shopify-product-scraper
     volumes:
       - ./stores.csv:/app/stores.csv:ro
-      - ./config.json:/app/config.json:ro
+      - type: bind
+        source: ${CONFIG_FILE:-./config.example.json}
+        target: /app/config.json
+        read_only: true
+        bind:
+          create_host_path: false
       - ./output:/app/output
       - ./logs:/app/logs
       - ./cache:/app/cache
