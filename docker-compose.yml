@@ -1,0 +1,11 @@
+services:
+  shopify-scraper:
+    build: .
+    container_name: shopify-product-scraper
+    volumes:
+      - ./stores.csv:/app/stores.csv:ro
+      - ./config.json:/app/config.json:ro
+      - ./output:/app/output
+      - ./logs:/app/logs
+      - ./cache:/app/cache
+    command: ["python", "scraper.py", "--input", "stores.csv", "--output", "output/products.csv"]

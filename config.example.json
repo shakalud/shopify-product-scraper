@@ -1,0 +1,19 @@
+{
+  "input_csv": "stores.csv",
+  "output_csv": "output/products.csv",
+  "errors_csv": "output/errors.csv",
+  "summary_json": "output/summary.json",
+  "log_file": "logs/scraper.log",
+  "progress_file": "cache/progress.json",
+  "limit": 250,
+  "max_pages": 100,
+  "timeout_seconds": 20,
+  "delay_seconds": 0.5,
+  "retries": 3,
+  "append": false,
+  "skip_completed": false,
+  "dedupe": true,
+  "write_empty_targets_to_errors": true,
+  "warn_on_empty_collection": true,
+  "user_agent": "Mozilla/5.0 (compatible; PublicShopifyProductScraper/0.2.1; +https://example.com/bot)"
+}

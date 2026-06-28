@@ -1,0 +1,59 @@
+2026-06-25 15:59:28,661 | INFO | Loaded 3 targets
+2026-06-25 15:59:28,661 | INFO | Scraping endpoint: https://www.zoologistperfumes.com/collections/samples-and-sets/products.json
+2026-06-25 15:59:28,819 | INFO | No more products at page 1 for https://www.zoologistperfumes.com/collections/samples-and-sets/products.json
+2026-06-25 15:59:28,821 | WARNING | Collection endpoint returned zero products. Check the collection handle/category URL, or use the full store export if the public collection JSON is empty. | https://www.zoologistperfumes.com/collections/samples-and-sets/products.json
+2026-06-25 15:59:28,824 | INFO | Saved 0 rows from https://www.zoologistperfumes.com/collections/samples-and-sets/products.json | products=0 | duplicates_skipped=0
+2026-06-25 15:59:28,825 | INFO | Scraping endpoint: https://www.zoologistperfumes.com/products.json
+2026-06-25 15:59:28,971 | INFO | Page 1: 126 new products, 127 CSV rows so far
+2026-06-25 15:59:28,976 | INFO | Saved 127 rows from https://www.zoologistperfumes.com/products.json | products=126 | duplicates_skipped=0
+2026-06-25 15:59:28,976 | INFO | Scraping endpoint: https://json-ld-for-seo-demo.myshopify.com/products.json
+2026-06-25 15:59:29,151 | INFO | Page 1: 7 new products, 10 CSV rows so far
+2026-06-25 15:59:29,153 | INFO | Saved 10 rows from https://json-ld-for-seo-demo.myshopify.com/products.json | products=7 | duplicates_skipped=0
+2026-06-25 15:59:29,153 | INFO | Done. Endpoints processed: 3 | Products: 133 | Rows exported: 137 | No-products endpoints: 1 | Errors: 0 | Output: C:\Users\mrfal\Downloads\shopify_product_scraper_v2_1\shopify_product_scraper_v2_1\output\products.csv
+2026-06-25 16:08:12,102 | INFO | Loaded 4 targets
+2026-06-25 16:08:12,103 | INFO | Scraping endpoint: https://www.zoologistperfumes.com/collections/samples-and-sets/products.json
+2026-06-25 16:08:12,286 | INFO | No more products at page 1 for https://www.zoologistperfumes.com/collections/samples-and-sets/products.json
+2026-06-25 16:08:12,288 | WARNING | Collection endpoint returned zero products. Check the collection handle/category URL, or use the full store export if the public collection JSON is empty. | https://www.zoologistperfumes.com/collections/samples-and-sets/products.json
+2026-06-25 16:08:12,289 | INFO | Saved 0 rows from https://www.zoologistperfumes.com/collections/samples-and-sets/products.json | products=0 | duplicates_skipped=0
+2026-06-25 16:08:12,289 | INFO | Scraping endpoint: https://www.zoologistperfumes.com/products.json
+2026-06-25 16:08:12,521 | INFO | Page 1: 126 new products, 127 CSV rows so far
+2026-06-25 16:08:12,526 | INFO | Saved 127 rows from https://www.zoologistperfumes.com/products.json | products=126 | duplicates_skipped=0
+2026-06-25 16:08:12,527 | INFO | Scraping endpoint: https://json-ld-for-seo-demo.myshopify.com/products.json
+2026-06-25 16:08:12,690 | INFO | Page 1: 7 new products, 10 CSV rows so far
+2026-06-25 16:08:12,692 | INFO | Saved 10 rows from https://json-ld-for-seo-demo.myshopify.com/products.json | products=7 | duplicates_skipped=0
+2026-06-25 16:08:12,692 | INFO | Scraping endpoint: https://www.zara.com/products.json
+2026-06-25 16:08:12,785 | WARNING | Request failed (1/3): https://www.zara.com/products.json?limit=250&page=1 | 403 Client Error: Forbidden for url: https://www.zara.com/products.json?limit=250&page=1
+2026-06-25 16:08:13,353 | WARNING | Request failed (2/3): https://www.zara.com/products.json?limit=250&page=1 | 403 Client Error: Forbidden for url: https://www.zara.com/products.json?limit=250&page=1
+2026-06-25 16:08:14,433 | WARNING | Request failed (3/3): https://www.zara.com/products.json?limit=250&page=1 | 403 Client Error: Forbidden for url: https://www.zara.com/products.json?limit=250&page=1
+2026-06-25 16:08:14,435 | ERROR | Target failed: store=https://www.zara.com/il/ category= error=Failed after 3 retries: https://www.zara.com/products.json?limit=250&page=1 | 403 Client Error: Forbidden for url: https://www.zara.com/products.json?limit=250&page=1
+Traceback (most recent call last):
+  File "C:\Users\mrfal\Downloads\shopify_product_scraper_v2_1\shopify_product_scraper_v2_1\scraper.py", line 498, in main
+    result = scrape_target(session, target, config)
+  File "C:\Users\mrfal\Downloads\shopify_product_scraper_v2_1\shopify_product_scraper_v2_1\scraper.py", line 307, in scrape_target
+    data = request_json(
+  File "C:\Users\mrfal\Downloads\shopify_product_scraper_v2_1\shopify_product_scraper_v2_1\scraper.py", line 231, in request_json
+    raise RuntimeError(f"Failed after {retries} retries: {response_url(url, params)} | {last_error}")
+RuntimeError: Failed after 3 retries: https://www.zara.com/products.json?limit=250&page=1 | 403 Client Error: Forbidden for url: https://www.zara.com/products.json?limit=250&page=1
+2026-06-25 16:08:14,437 | INFO | Done. Endpoints processed: 3 | Products: 133 | Rows exported: 137 | No-products endpoints: 1 | Errors: 1 | Output: C:\Users\mrfal\Downloads\shopify_product_scraper_v2_1\shopify_product_scraper_v2_1\output\products.csv
+2026-06-25 16:12:08,679 | INFO | Loaded 3 targets
+2026-06-25 16:12:08,679 | INFO | Scraping endpoint: https://www.zoologistperfumes.com/products.json
+2026-06-25 16:12:08,889 | INFO | Page 1: 126 new products, 127 CSV rows so far
+2026-06-25 16:12:08,891 | INFO | Saved 127 rows from https://www.zoologistperfumes.com/products.json | products=126 | duplicates_skipped=0
+2026-06-25 16:12:08,893 | INFO | Scraping endpoint: https://json-ld-for-seo-demo.myshopify.com/products.json
+2026-06-25 16:12:09,056 | INFO | Page 1: 7 new products, 10 CSV rows so far
+2026-06-25 16:12:09,056 | INFO | Saved 10 rows from https://json-ld-for-seo-demo.myshopify.com/products.json | products=7 | duplicates_skipped=0
+2026-06-25 16:12:09,056 | INFO | Scraping endpoint: https://flits-demo-2.myshopify.com/products.json
+2026-06-25 16:12:09,546 | INFO | Page 1: 18 new products, 21 CSV rows so far
+2026-06-25 16:12:09,546 | INFO | Saved 21 rows from https://flits-demo-2.myshopify.com/products.json | products=18 | duplicates_skipped=0
+2026-06-25 16:12:09,548 | INFO | Done. Endpoints processed: 3 | Products: 151 | Rows exported: 158 | No-products endpoints: 0 | Errors: 0 | Output: C:\Users\mrfal\Downloads\shopify_product_scraper_v2_1\shopify_product_scraper_v2_1\output\products.csv
+2026-06-25 14:00:00,413 | INFO | Loaded 3 targets
+2026-06-25 14:00:00,414 | INFO | Scraping endpoint: https://www.zoologistperfumes.com/products.json
+2026-06-25 14:00:00,776 | INFO | Page 1: 126 new products, 127 CSV rows so far
+2026-06-25 14:00:00,800 | INFO | Saved 127 rows from https://www.zoologistperfumes.com/products.json | products=126 | duplicates_skipped=0
+2026-06-25 14:00:00,801 | INFO | Scraping endpoint: https://json-ld-for-seo-demo.myshopify.com/products.json
+2026-06-25 14:00:01,071 | INFO | Page 1: 7 new products, 10 CSV rows so far
+2026-06-25 14:00:01,081 | INFO | Saved 10 rows from https://json-ld-for-seo-demo.myshopify.com/products.json | products=7 | duplicates_skipped=0
+2026-06-25 14:00:01,082 | INFO | Scraping endpoint: https://flits-demo-2.myshopify.com/products.json
+2026-06-25 14:00:01,457 | INFO | Page 1: 18 new products, 21 CSV rows so far
+2026-06-25 14:00:01,467 | INFO | Saved 21 rows from https://flits-demo-2.myshopify.com/products.json | products=18 | duplicates_skipped=0
+2026-06-25 14:00:01,471 | INFO | Done. Endpoints processed: 3 | Products: 151 | Rows exported: 158 | No-products endpoints: 0 | Errors: 0 | Output: /app/output/products.csv
